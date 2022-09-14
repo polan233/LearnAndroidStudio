@@ -3,4 +3,10 @@
     <declare-styleable name="customStyleView">
         <attr name="sweepAngleAdd" format="integer"/>
     </declare-styleable>
+    <declare-styleable name="customLayoutLP">
+        <attr name="layout_position">
+            <enum name="right" value="1"/>
+            <enum name="bottom" value="2"/>
+        </attr>
+    </declare-styleable>
 </resources>
