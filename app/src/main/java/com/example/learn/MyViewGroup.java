@@ -15,13 +15,32 @@ public class MyViewGroup extends ViewGroup {
     }
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec){
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+
         int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
         int sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
 
         measureChildren(widthMeasureSpec,heightMeasureSpec);
 
-        Log.i("polan","测量宽度："+sizeWidth+" 测量高度："+sizeHeight);
-        setMeasuredDimension(sizeWidth,sizeHeight);
+        if(getChildCount()<=0){
+            setMeasuredDimension(0,0);
+        }
+        else{
+            if(heightMode==MeasureSpec.AT_MOST&&widthMode==MeasureSpec.AT_MOST){
+                int measureWidth=0;
+                int maxMeasureHeight=0;
+                for(int i=0;i<getChildCount();i++){
+                    View child=getChildAt(i);
+                    measureWidth+=child.getMeasuredWidth();
+                    if(child.getMeasuredHeight()>maxMeasureHeight) maxMeasureHeight=child.getMeasuredHeight();
+                }
+                setMeasuredDimension(measureWidth,maxMeasureHeight);
+            }
+            else{
+                setMeasuredDimension(sizeWidth,sizeHeight);
+            }
+        }
     }
 
     @Override
