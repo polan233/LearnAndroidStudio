@@ -27,3 +27,13 @@ android:orientation="horizontal";//水平排列
 灵活性很大,操作难度也很大
 
 见写的登录界面实例
+
+### FrameLayout
+
+见写的实例,所有组件会位于这个容器的左上角,后面的会覆盖前面的
+
+可以添加layout_gravity调整对齐方式
+
+### 嵌套
+
+看实例
