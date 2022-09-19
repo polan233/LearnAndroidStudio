@@ -37,3 +37,17 @@ android:orientation="horizontal";//水平排列
 ### 嵌套
 
 看实例
+
+## intent
+Intent是不同组件之间通信的<strong>媒介</strong>或者<strong>信使</strong>
+
+### intent实现Activity页面跳转
+1. 第一个Activity添加setOnClickListener(),在这个方法里建立intent对象：<br>
+   ```
+    Intent intent=new Intent();
+   ```
+2. 设定如何启动另一个activity:
+   ```
+    Intent.setClass(CurrentActivity.this, OtherActivity.class);
+    CurrentActivity.this.startActivity(intent);
+   ```
