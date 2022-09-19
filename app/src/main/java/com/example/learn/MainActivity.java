@@ -18,7 +18,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         llRootView=(LinearLayout) findViewById(R.id.ll_root_view);
-        findViewById(R.id.button).setOnClickListener(onClickListener);
+        findViewById(R.id.button).setOnClickListener(onClickListener); //内部类写法
+
+        findViewById(R.id.btn_to_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent threeIntent = new Intent("com.example.learn.ThirdActivity");
+                startActivity(threeIntent);
+            }
+        });
 
 
     }
