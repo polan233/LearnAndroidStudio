@@ -51,3 +51,6 @@ Intent是不同组件之间通信的<strong>媒介</strong>或者<strong>信使<
     Intent.setClass(CurrentActivity.this, OtherActivity.class);
     CurrentActivity.this.startActivity(intent);
    ```
+### intent不同界面传参
+Extra是键值对，用`putExtra()` 和 S`getExtra()`
+## bundle?
