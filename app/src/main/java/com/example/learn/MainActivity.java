@@ -2,6 +2,7 @@ package com.example.learn;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent threeIntent = new Intent("com.example.learn.ThirdActivity");
                 startActivity(threeIntent);
+//                Intent intent = new Intent(MainActivity.this,ExplodeActivity.class);
+//                startActivity(intent, ActivityOptions.
+//                        makeSceneTransitionAnimation(MainActivity.this).toBundle());
+            }
+        });
+        findViewById(R.id.btn_to_exp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent threeIntent = new Intent("com.example.learn.ThirdActivity");
+//                startActivity(threeIntent);
+                Intent intent = new Intent(MainActivity.this,ExplodeActivity.class);
+                startActivity(intent, ActivityOptions.
+                        makeSceneTransitionAnimation(MainActivity.this).toBundle());
             }
         });
 

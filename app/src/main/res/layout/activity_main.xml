@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_gravity="right"
-        android:text="登录"
+        android:text="登录感受自定义的过渡动画"
         android:textSize="20sp"/>
     <Button
         android:id="@+id/btn_to_3"
@@ -57,6 +57,14 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_gravity="right"
         android:text="隐式intent跳转"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btn_to_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="right"
+        android:text="跳转到explode以感受炫酷的Explode动画!"
         android:textSize="20sp"/>
 
 </LinearLayout>
