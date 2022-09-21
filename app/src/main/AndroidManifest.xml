@@ -15,7 +15,12 @@
         tools:targetApi="31">
         <activity
             android:name=".SecondActivity"
-            android:exported="false" />
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.example.learn.SecondActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
