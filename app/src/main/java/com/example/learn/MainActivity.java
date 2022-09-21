@@ -4,46 +4,86 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout llRootView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("MainActivity", "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        llRootView=(LinearLayout) findViewById(R.id.ll_root_view);
-        findViewById(R.id.button).setOnClickListener(onClickListener);
+        findViewById(R.id.button_res_another).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText eta = (EditText) findViewById(R.id.et_numa);
+                double numa = Double.parseDouble(eta.getText().toString());
+                EditText etb = (EditText) findViewById(R.id.et_numb);
+                double numb = Double.parseDouble(etb.getText().toString());
+                double res = numa * numb;
 
-
-    }
-
-
-    private View.OnClickListener onClickListener=new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            EditText eNick =(EditText) findViewById(R.id.et_nickname);
-            EditText ePass =(EditText) findViewById(R.id.et_password);
-            String user = eNick.getText().toString();
-            String pass = ePass.getText().toString();
-            if(user.equals("lth")&&pass.equals("123")){
-                Toast.makeText(MainActivity.this,"用户密码正确",
-                        Toast.LENGTH_LONG).show();
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this,SecondActivity.class);
-                intent.putExtra("user",user);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("res", String.format("%.2f", res));
                 startActivity(intent);
             }
-            else{
-                Toast.makeText(MainActivity.this,"用户密码错误",
-                        Toast.LENGTH_LONG).show();
-            }
+        });
 
-        }
-    };
+        findViewById(R.id.button_res_jump).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText eta = (EditText) findViewById(R.id.et_numa);
+                double numa = Double.parseDouble(eta.getText().toString());
+                EditText etb = (EditText) findViewById(R.id.et_numb);
+                double numb = Double.parseDouble(etb.getText().toString());
+                double res = numa * numb;
+                String msg = String.format("%.2f", res);
+
+                Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+                intent.putExtra("res", msg);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("MainActivity", "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("MainActivity", "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("MainActivity", "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.w("MainActivity", "onStop");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.w("MainActivity", "onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i("MainActivity", "onDestroy");
+        super.onDestroy();
+    }
 }

@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/LearnAndroidStudio/app/src/main/res/drawable/toast_bg.xml" value="0.128" />
+        <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/activity_explode.xml" value="0.5" />
+        <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/activity_second.xml" value="0.17" />
+        <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/activity_third.xml" value="0.33" />
+        <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/toast_bg.xml" value="0.22861842105263158" />
+        <entry key="..\:/LearnAndroidStudio/app/src/main/res/layout/toast_msg.xml" value="0.2189207650273224" />
         <entry key="..\:/android/app/src/main/res/layout/activity_main.xml" value="0.2128623188405797" />
       </map>
     </option>

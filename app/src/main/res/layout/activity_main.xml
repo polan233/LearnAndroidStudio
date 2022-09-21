@@ -10,45 +10,48 @@
         android:orientation="horizontal"
         android:paddingLeft="5dp"
         android:paddingRight="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="用户名:"
-            android:textSize="20sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_nickname"
-            android:hint="请输入用户名"
-            android:textSize="20sp"/>
+            android:id="@+id/et_numa"
+            android:hint="请输入乘数A"
+            android:textSize="25sp"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="乘以"
+        android:padding="10sp"
+        android:textSize="30sp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="5dp"
         android:paddingRight="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="密    码:"
-            android:textSize="20sp"/>
-
         <EditText
-            android:id="@+id/et_password"
+            android:id="@+id/et_numb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入密码"
-            android:inputType="textPassword"
-            android:textSize="20sp" />
+            android:hint="请输入乘数B"
+            android:textSize="25sp" />
     </LinearLayout>
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_res_another"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_gravity="right"
-        android:text="登录"
+        android:layout_gravity="center"
+        android:text="结果在另一页显示"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/button_res_jump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="center"
+        android:text="结果在弹窗显示"
         android:textSize="20sp"/>
 
 </LinearLayout>

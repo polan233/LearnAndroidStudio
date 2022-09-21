@@ -17,15 +17,14 @@ public class SecondActivity extends AppCompatActivity {
         Button btn=(Button) findViewById(R.id.button2);
         btn.setOnClickListener(OnclickListener);
 
-        String greeting = "Hello";
+
         Intent intent=getIntent();
-        String user=intent.getExtras().getString("user");
-        if (user!=null){
-            greeting=greeting+','+user+"!";
+        String res=intent.getExtras().getString("res");
+        if (res!=null){
+            TextView tv=findViewById(R.id.tv_res);
+            tv.setText(res);
         }
 
-        TextView tv=findViewById(R.id.textView);
-        tv.setText(greeting);
     }
     private View.OnClickListener OnclickListener=new View.OnClickListener() {
         @Override
