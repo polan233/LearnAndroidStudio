@@ -21,11 +21,6 @@ public class ExplodeActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_explode);
 
-        findViewById(R.id.explode_root).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+
     }
 }

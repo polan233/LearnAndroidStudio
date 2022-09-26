@@ -16,9 +16,7 @@
         <activity
             android:name=".ExplodeActivity"
             android:exported="false" />
-        <activity
-            android:name=".activity_explode"
-            android:exported="false" />
+
         <activity
             android:name=".SecondActivity"
             android:exported="false" />
